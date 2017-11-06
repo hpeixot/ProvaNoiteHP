@@ -1,0 +1,34 @@
+﻿@model Prova1.Models.Personagens
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Personagens</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonagensTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonagensTipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonagensEspecialidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonagensEspecialidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PersonagensID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

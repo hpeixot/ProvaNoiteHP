@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Prova1.Models.Personagens>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonagensTipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonagensEspecialidade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonagensTipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonagensEspecialidade)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PersonagensID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PersonagensID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PersonagensID })
+        </td>
+    </tr>
+}
+
+</table>
